@@ -1,0 +1,69 @@
+ Baths
+        o M – F : 2 showers and 2 baths per day
+        o S – S : 3 showers and 3 baths per day
+        o Shower – 25 gallons of water used (65% hot water, 35% cold water)
+        o Bath – 30 gallons of water used (65% hot water, 35% cold water)
+
+ Dishwasher
+        o 1800 watts
+        o 6 gallons of hot water per load
+        o Runs 45 min per load
+        o 4 loads of dishes per week
+
+ Clothes Washer
+        o 500 watts
+        o 20 gallons of water (85% hot water, 15% cold water) per load
+        o Runs 30 min per load
+        o 4 loads of clothes per week
+
+//////
+
+ Water Cost –
+        o $2.52 per 100 Cubic Feet of water
+        o 1 Cubic Feet of water is 7.48 Gallons
+        o 100 Cubic Feet is 748 Gallons
+        o So 748 Gallons costs $2.52
+/////
+
+    avg shower gallons/minute:
+        2.5 gpm
+
+
+////
+
+
+desired output:
+        Event Data
+        - location
+        - sensor_name
+        - time
+        - value
+        - dataset
+
+        -Example:
+        bathroom,shower,9/16/22 10:26:05,110,production
+        kitchen,stove,9/16/22 10:41:05,false,production
+
+
+///
+
+
+psuedo bath loop:
+    
+    water_total = 0
+    bath = 30
+    shower = 25
+    
+    for i in range(7):
+        water_total += bath
+        water_total += bath
+        
+        water_total += shower
+        water_total += shower
+        water_total += shower
+
+if __name__ == '__main__':
+    f = open("demodata.csv", "w")         
+
+    
+
